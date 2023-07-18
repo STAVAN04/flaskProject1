@@ -1,25 +1,63 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">#}
+{##}
+{#    <meta charset="UTF-8">#}
+{#    <title>Login</title>#}
+{#</head>#}
+{#<body>#}
+{#<form action="/login" method="post">#}
+{#    <lable>User name:</lable>#}
+{#    <input type="text" name="un"><br>#}
+{#    <lable>Password:</lable>#}
+{#    <input type="password" name="password"><br>#}
+{#    <input type="submit">#}
+{#</form>#}
+{##}
+{#{% with msg = get_flashed_messages() %}#}
+{#    {% if msg %}#}
+{#        <div style = "...">{{ msg[0] }}</div>#}
+{#    {% endif %}#}
+{#{% endwith %}#}
+{##}
+{#</body>#}
+{#</html>#}
+
+
+
+
 <!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Login Page</header>
+      <form action="/login"  method="post" class="form">
+        <div class="input-box">
+          <label>User name</label>
+          <input type="text" placeholder="User name" required name="un" />
+        </div>
+        <div class="input-box">
+          <label>Password</label>
+          <input type="text" placeholder="Password" required name="password" />
+        </div>
+        <button>Submit</button>
+      </form>
 
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
-<form action="/login" method="post">
-    <lable>User name:</lable>
-    <input type="text" name="un"><br>
-    <lable>Password:</lable>
-    <input type="password" name="password"><br>
-    <input type="submit">
-</form>
-
-{% with msg = get_flashed_messages() %}
-    {% if msg %}
-        <div style = "...">{{ msg[0] }}</div>
-    {% endif %}
-{% endwith %}
-
-</body>
+       {% with msg = get_flashed_messages() %}
+            {% if msg %}
+                <div style = "...">{{ msg[0] }}</div>
+            {% endif %}
+       {% endwith %}
+    </section>
+  </body>
 </html>

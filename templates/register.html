@@ -1,21 +1,58 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">#}
+{#    <title>Registration form</title>#}
+{#</head>#}
+{#<body>#}
+{#    <h1>Registration form</h1>#}
+{#    <form action="/registration" method="post">#}
+{#        <lable>First name:</lable>#}
+{#        <input type="text" id="fn" name="fn"/><br>#}
+{#        <lable>Last name:</lable>#}
+{#        <input type="text" id="ln" name="ln"/><br>#}
+{#        <lable>User name:</lable>#}
+{#        <input type="text" id="un" name="un"/><br>#}
+{#        <lable>Password:</lable>#}
+{#        <input type="password" id="password" name="password"/><br>#}
+{#        <input type="submit"/>#}
+{#    </form>#}
+{#</body>#}
+{#</html>#}
+
 <!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
-    <title>Registration form</title>
-</head>
-<body>
-    <h1>Registration form</h1>
-    <form action="/registration" method="post">
-        <lable>First name:</lable>
-        <input type="text" id="fn" name="fn"/><br>
-        <lable>Last name:</lable>
-        <input type="text" id="ln" name="ln"/><br>
-        <lable>User name:</lable>
-        <input type="text" id="un" name="un"/><br>
-        <lable>Password:</lable>
-        <input type="password" id="password" name="password"/><br>
-        <input type="submit"/>
-    </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Registration Form</header>
+      <form action="/registration" method="post" class="form">
+        <div class="input-box">
+          <label>First Name</label>
+          <input type="text" placeholder="First name" required name="fn" />
+        </div>
+        <div class="input-box">
+          <label>Last name</label>
+          <input type="text" placeholder="Last name" required name="ln" />
+        </div>
+        <div class="input-box">
+          <label>User name</label>
+          <input type="text" placeholder="User name" required name="un" />
+        </div>
+        <div class="input-box">
+          <label>Password</label>
+          <input type="text" placeholder="Password" required name="password" />
+        </div>
+        <button>Submit</button>
+      </form>
+    </section>
+  </body>
 </html>
